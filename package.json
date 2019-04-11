@@ -1,0 +1,9 @@
+{
+  "name": "es6-model",
+  "version": "1.0.0",
+  "description": "ES6-based model class helper.",
+  "main": "index.js",
+  "repository": "https://github.com/mkknx/es6-model",
+  "author": "Mkknx (hello@mknx.io)",
+  "license": "MIT"
+}
