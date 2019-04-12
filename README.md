@@ -10,7 +10,7 @@ an ES6-compatible transpiler like [Babel](https://github.com/babel/babel).
 Additionally, you'll need to install this Babel package to make your models working:
 [@babel/plugin-proposal-class-properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-class-properties).
 
-*Note: This package is actually needed because the "class properties" concept is not an official
+*Note: This package is currently needed because the "class properties" concept is not an official
 ECMA standard yet. This repo will be updated when the standard will become available.*
 
 ## Installation
@@ -92,8 +92,8 @@ The type you want to use for the argument.
 
 #### propRequired
 A boolean indicating if the property is required or not.  
-A required property tells the Base Model to check if the value is different from `null` and
-`undefined`.
+*A required property tells the Base Model to check if the value is different from `null` and
+`undefined`.*
 
 ```javascript
 constructor (name, children) {
