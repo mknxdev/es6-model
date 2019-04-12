@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>es6-model demo</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+          body {
+            font-family: sans-serif;
+          }
+          #demo-app {
+            max-width: 800px;
+            margin: 0 auto;
+          }
+          code.dark {
+            color: white;
+            background: rgb(0, 0, 0);
+          }
+          code.dark .hljs-string { color: #ff0000; }
+          code.dark .hljs-number { color: #d9713f; }
+        </style>
+        <link rel="stylesheet" type="text/css" href="/node_modules/highlight.js/styles/default.css">
+    </head>
+    <body>
+        <div id="demo-app">
+          <h1>es6-model</h1>
+          <h2>Example: NewsArticle</h2>
+
+          <p>(Open you console to see it working)</p>
+
+          <div class="demo-app-code">
+            <pre>
+              <code class="js">
+                import NewsArticle from './models/NewsArticle'
+
+                let article = new NewsArticle(
+                  'Hallelujah! Google Assistant finally has access to your G Suite calendar',
+                  'Some useful description about the article.',
+                  (new Date('April 12, 2019 21:00:00')),
+                  'The Next Web'
+                )
+
+                console.log(article)
+              </code>
+
+              <code class="js dark">
+                > NewsArticle {
+                 description: "Some useful description about the article."
+                 media: null
+                 publishedAt: Fri Apr 12 2019 21:00:00 GMT+0200 (Central European Summer Time) 
+                 title: "Hallelujah! Google Assistant finally has access to your G Suite calendar"
+                }
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <script src="/dist/demo-newsarticle.js"></script>
+    </body>
+</html>

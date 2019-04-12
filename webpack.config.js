@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   entry: {
     'es6-model': './src/index.js',
-    demo: './examples/script.js'
+    'demo-newsarticle': './examples/NewsArticle/script.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -18,11 +18,10 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader',
-          'sass-loader'
+          'css-loader'
         ]
       }
     ]
@@ -36,7 +35,9 @@ module.exports = {
       '@': path.resolve(__dirname, 'src')
     }
   },
+
   devServer: {
-    contentBase: './dist'
+    contentBase: './',
+    publicPath: './'
   }
 };

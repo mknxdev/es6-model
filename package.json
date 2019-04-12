@@ -2,13 +2,13 @@
   "name": "es6-model",
   "version": "1.0.0",
   "description": "ES6-based model class helper.",
-  "main": "index.js",
+  "main": "es6-model.js",
   "repository": "https://github.com/mkknx/es6-model",
   "author": "Mkknx (hello@mknx.io)",
   "license": "MIT",
   "scripts": {
     "clean": "rm dist/es6-model.js",
-    "build-dev": "webpack -d --mode development",
+    "build": "webpack -d --mode development",
     "start": "webpack-dev-server"
   },
   "devDependencies": {
@@ -17,6 +17,7 @@
     "@babel/preset-env": "^7.4.3",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
+    "highlight.js": "^9.15.6",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",

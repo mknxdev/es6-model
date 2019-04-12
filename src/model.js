@@ -70,7 +70,7 @@ export default class Model {
 
     // Check for type error and throw an error if it occurs
     if (typeError) {
-      if ((isRequired && argValue === null) || (!isRequired && argValue !== null)) {
+      if ((isRequired && argValue == null) || (!isRequired && argValue != null)) {
         this._throwArgTypeError(typeError, argName, argValue)
       }
     }
@@ -156,6 +156,6 @@ export default class Model {
     if (typeof argValue === 'string') argValue = `'${argValue}'`
     const msg = `[ArgumentError] Expected type(s) <${type}> for argument '${argName}' (received: ${argValue}).`
     console.error(msg)
-    throw new Error(msg)
+    // throw new Error(msg)
   }
 }
