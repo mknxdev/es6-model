@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    'es6-model': './src/index.js',
+    'es6-model': './index.js',
     'demo-newsarticle': './examples/NewsArticle/script.js'
   },
   output: {
