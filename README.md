@@ -1,4 +1,153 @@
 # es6-model
 
-*ES6-based model class helper.*
+ES6-model is a simple base-class helper designed for data-models in JavaScript.
 
+## Prerequisites
+
+As this package use the `class` ES6-based syntax, your app needs to integrate
+an ES6-compatible transpiler like [Babel](https://github.com/babel/babel).
+
+Additionally, you'll need to install this Babel package to make your models working:
+[@babel/plugin-proposal-class-properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-class-properties).
+
+*Note: This package is actually needed because the "class properties" concept is not an official
+ECMA standard yet. This repo will be updated when the standard will become available.*
+
+## Installation
+
+**npm**
+
+```shell
+npm install es6-model --save-dev
+```
+
+**yarn**
+
+```shell
+yarn add -d es6-model
+```
+
+## Usage
+
+Import es6-model in your code where you want to define your app's models, then
+use it as a base class.
+
+```javascript
+// Import es6-model
+import Model from 'es6-model'
+
+// Extends the base class to create your own
+class Pet extends Model {
+  // ...
+}
+
+// You can also extend your own model-based classes
+class Cat extends Pet {
+  // ...
+}
+
+```
+
+Declare your class properties, then in your `constructor` method, pass them to the `super`
+magic method call before assigning them.
+
+```javascript
+class Pet extends Model {
+  // Declare your class properties
+  name = null
+  age = null
+
+  constructor (name, age) {
+    super({
+      name: [name, String],
+      age: [age, Number]
+    })
+
+    this.name = name
+    this.age = age
+  }
+}
+```
+By calling the **es6-model** constructor method with `super()`, several type & value checkings
+will be performed on your constructor arguments. This will force your model data to be strictly
+the types you define.
+
+## Documentation
+
+Your constructor arguments **must** be passed to the `super()` method through an object, with each field
+representing an argument with its associated constraints:
+
+```javascript
+propName: [propValue, propType, propRequired]
+```
+
+#### propName
+Name of the property you want to assign (same as the corresponding argument name).
+
+#### propValue
+The property value, directly retrieved from the constructor arguments.
+
+#### propType
+The type you want to use for the argument.
+
+#### propRequired
+A boolean indicating if the property is required or not.  
+A required property tells the Base Model to check if the value is different from `null` and
+`undefined`.
+
+```javascript
+constructor (name, children) {
+  super({
+    name: [name, String, true], // required property
+    children: [children, Array] // optional property
+  })
+}
+```
+
+You can also provide a custom object type.
+
+```javascript
+class Pet extends Model {
+  // ...
+}
+```
+```javascript
+constructor (pet) {
+  super({
+    // Declare 'pet' prop to be a <Pet> object
+    pet: [pet, Pet, true]
+  })
+}
+```
+
+Sometimes we want to use an array as value, but what if we want to have an array of a specific
+type?
+
+```javascript
+class People extends Model {
+  // ...
+}
+```
+```javascript
+constructor (children) {
+  super({
+    // Declare 'children' prop to be an Array of <People> objects
+    children: [children, { Array: People }, true]
+  })
+}
+```
+
+In some cases, we also want to accept multiple types for a given property.
+
+```javascript
+constructor (id) {
+  super({
+    // Declare 'id' prop to be either a Number or a String
+    id: [children, [Number, String], true]
+  })
+}
+```
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
