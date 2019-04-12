@@ -165,4 +165,4 @@ Go to `http://localhost:<PORT>/examples/`, and select an example directory.
 [MIT](https://opensource.org/licenses/MIT)
 
 [CHANGELOG]: ./CHANGELOG.md
-[version-badge]: https://img.shields.io/badge/version-1.0.0-blue.svg
+[version-badge]: https://img.shields.io/badge/version-1.0.1-blue.svg
