@@ -1,4 +1,4 @@
-# es6-model
+# es6-model [![version][version-badge]][CHANGELOG]
 
 ES6-model is a simple base-class helper designed for data-models in JavaScript.
 
@@ -151,3 +151,6 @@ constructor (id) {
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
+
+[CHANGELOG]: ./CHANGELOG.md
+[version-badge]: https://img.shields.io/badge/version-1.0.0-blue.svg
