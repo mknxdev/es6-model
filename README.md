@@ -148,6 +148,18 @@ constructor (id) {
 }
 ```
 
+## Examples
+
+You can see a demo of this package by running these commands in the project root:
+
+```shell
+yarn install
+yarn start
+```
+
+Go to `http://localhost:<PORT>/examples/`, and select an example directory.
+
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
