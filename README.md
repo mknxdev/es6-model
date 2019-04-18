@@ -120,8 +120,7 @@ constructor (pet) {
 }
 ```
 
-Sometimes we want to use an array as value, but what if we want to have an array of a specific
-type?
+Sometimes you want to use an array as value, but what if you want to restrict your array to a specific type?
 
 ```javascript
 class People extends Model {
@@ -143,7 +142,7 @@ In some cases, we also want to accept multiple types for a given property.
 constructor (id) {
   super({
     // Declare 'id' prop to be either a Number or a String
-    id: [children, [Number, String], true]
+    id: [id, [Number, String], true]
   })
 }
 ```
@@ -165,4 +164,4 @@ Go to `http://localhost:<PORT>/examples/`, and select an example directory.
 [MIT](https://opensource.org/licenses/MIT)
 
 [CHANGELOG]: ./CHANGELOG.md
-[version-badge]: https://img.shields.io/badge/version-1.0.1-blue.svg
+[version-badge]: https://img.shields.io/badge/version-1.0.2-blue.svg
