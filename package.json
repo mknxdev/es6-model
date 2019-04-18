@@ -1,10 +1,11 @@
 {
   "name": "es6-model",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ES6-based model class helper.",
   "main": "es6-model.js",
   "repository": "https://github.com/mkknx/es6-model",
-  "author": "Mkknx (hello@mknx.io)",
+  "author": "mkknx (hello@mknx.io)",
+  "keywords": ["es6", "model", "js"],
   "license": "MIT",
   "scripts": {
     "clean": "rm dist/es6-model.js",
