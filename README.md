@@ -5,9 +5,11 @@ ES6-model is a simple base-class helper designed for data-models in JavaScript.
 ## Prerequisites
 
 As this package use the `class` ES6-based syntax, your app needs to integrate
-an ES6-compatible transpiler like [Babel](https://github.com/babel/babel).
+an ES6-compatible transpiler like [Babel](https://github.com/babel/babel).  
+*This guide assumes that you are using this transpiler so some instructions will refer to this specific package.  
+Please refer to the corresponding package documentation if you are using another one.*
 
-Additionally, you'll need to install this Babel package to make your models working:
+In addition to the Babel package, you'll need to install this plugin to make your models working:
 [@babel/plugin-proposal-class-properties](https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-class-properties).
 
 *Note: This package is currently needed because the "class properties" concept is not an official
