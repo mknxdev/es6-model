@@ -1,4 +1,4 @@
-# es6-model [![version][version-badge]][CHANGELOG]
+# es6-model [DEPRECATED] [![version][version-badge]][CHANGELOG]
 
 ES6-model is a simple base-class helper designed for data-models in JavaScript.
 
