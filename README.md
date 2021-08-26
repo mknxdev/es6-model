@@ -4,6 +4,10 @@
 I cannot and don't want to maintain this tool for the moment.
 I will certainly take the work back on this project in the future, but no date is planned for this yet._
 
+_You can still fork this project and submit your PR if you want to. I'll continue to accept incoming PRs that are useful for the project._
+
+---
+
 ES6-model is a simple base-class helper designed for data-models in JavaScript.
 
 ## Prerequisites
