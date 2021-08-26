@@ -1,5 +1,9 @@
 # es6-model [NOT MAINTAINED] [![version][version-badge]][CHANGELOG]
 
+**Disclaimer**: _As I currently have other packages to maintain, and other hobbies that take me time,
+I cannot and don't want to maintain this tool for the moment.
+I will certainly take the work back on this project in the future, but no date is planned for this yet._
+
 ES6-model is a simple base-class helper designed for data-models in JavaScript.
 
 ## Prerequisites
